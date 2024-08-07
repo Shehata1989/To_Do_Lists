@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do Lists</title>
+    <link rel="icon" href="#" />
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="./all.min.css" />
+  </head>
+  <body class="relative">
+    <!-- Page -->
+    <div class="">
+      <!-- Center Div -->
+      <div class="flex justify-center items-center">
+        <!-- Task Table -->
+        <div class="w-[600px] max-w-full mt-[120px] px-5" dir="rtl">
+          <!-- Header Tasks -->
+          <header class="bg-teal-500 p-5 relative">
+            <h1 class="text-center text-xl">مهامي</h1>
+            <button
+              id="add-task"
+              class="absolute right-4 top-1/2 -translate-y-1/2"
+            >
+              <i class="fa-solid fa-plus p-2 bg-white rounded-full"></i>
+            </button>
+          </header>
+          <!-- //Header Tasks// -->
+
+          <!-- Tasks Body -->
+          <div id="tasks" class="py-2 bg-slate-100">
+          </div>
+          <!-- //Tasks Body// -->
+
+        </div>
+        <!-- //Task Table// -->
+      </div>
+      <!-- //Center Div// -->
+    </div>
+    <div class="overlay hidden"></div>
+    <div class="popup-box hidden">
+      <h1 class="text-2xl">اضف مهمه جديدة</h1>
+      <input
+        id="input"
+        class="outline-none border border-black w-full my-5 p-2"
+        type="text"
+      />
+      <button
+        id="btn"
+        class="btn-popup py-2 px-4 bg-[#19a090] rounded-lg hover:bg-teal-700 transition duration-300"
+      >
+        اضــــف
+      </button>
+      <div class="close-icon">X</div>
+    </div>
+    <!-- Page -->
+    <script src="./app.js"></script>
+  </body>
+</html>

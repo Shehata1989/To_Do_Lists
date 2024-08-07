@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+
+html {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 900;
+  font-style: oblique;
+}
+
+.overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.3);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+}
+
+.overlay.open {
+display: block;
+}
+
+.popup-box {
+  direction: rtl;
+  width: 400px;
+  background-color: white;
+  padding: 50px;
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 20000;
+  text-align: center;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.6);
+  border-radius: 6px;
+}
+
+.popup-box.open {
+    display: block;
+}
+
+.close-icon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 14px;
+  padding: 5px 8px;
+  background-color: rgb(223, 88, 88);
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close-icon:hover {
+  background-color: rgb(224, 28, 28);
+}
