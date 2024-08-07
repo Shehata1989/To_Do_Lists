@@ -102,7 +102,7 @@ function addNewTask() {
 
   renderTasks();
   togglePopup();
-  input.input = "";
+  input.value = "";
 }
 
 // حذف مهمة عند النقر على زر الحذف
