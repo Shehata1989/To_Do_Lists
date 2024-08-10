@@ -8,7 +8,6 @@ const closeIcon = document.querySelector(".close-icon");
 
 // جلب المهام من localStorage عند تحميل الصفحة
 window.onload = function () {
-
   if (localStorage.getItem("tasks")) {
     tasksArr = JSON.parse(localStorage.getItem("tasks"));
     renderTasks();
