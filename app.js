@@ -6,6 +6,15 @@ const input = document.getElementById("input");
 const btnAddTask = document.getElementById("btn");
 const closeIcon = document.querySelector(".close-icon");
 
+// جلب المهام من localStorage عند تحميل الصفحة
+window.onload = function () {
+
+  if (localStorage.getItem("tasks")) {
+    tasksArr = JSON.parse(localStorage.getItem("tasks"));
+    renderTasks();
+  }
+};
+
 let tasksArr = [];
 let index = 0;
 let editingTaskId = null; // لتخزين ID المهمة التي يتم تعديلها
@@ -49,6 +58,7 @@ function renderTasks() {
     `;
     tasks.appendChild(taskElement);
   });
+  localStorage.setItem("tasks", JSON.stringify(tasksArr));
 }
 
 // فتح وإغلاق النافذة المنبثقة
@@ -170,5 +180,3 @@ input.addEventListener("keydown", (e) => {
 
 // مستمع حدث النقر على المهام
 tasks.addEventListener("click", handleTaskClick);
-
-
